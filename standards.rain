@@ -1,0 +1,32 @@
+- Users
+    - <<$username>> string
+    - <<$days_left>> int
+    - <<$admin>> bool
+    - <<$reseller>> bool
+    - <<$banned>> bool
+    - <<$vip>> bool
+    - <<$raw>> bool
+    - <<$holder>> bool
+    - <<$newuser>> bool 
+    - <<$maxsessions>> int
+    - <<$maxtime>> int 
+    - <<$cooldown>> int
+    - <<$concurrents>> int
+    - <<$myongoing>> int
+    - <<$ongoing>> int
+
+- Misc 
+    - <<$online>> int
+    - <<$cnc>> string
+    - <<sleep()>> func
+    - <<clear()>> func
+    - <<include(file)>> func
+    - <<time()>> func
+    - <<$date>> string
+    - <<$os>> string
+    
+- Custom Login
+    - <<usernameposition(row,column)>> func
+    - <<passwordposition(row,column)>> func
+    - <<newpwdposition(row,column)>> func
+    - <<cnewpwdposition(row,column)>> func

@@ -1,0 +1,5 @@
+Attack sent successfully
+Port: <<$port>>
+Target: <<$target>>
+Method: <<$method>>
+Duration: <<$duration>>

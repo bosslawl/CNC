@@ -1,0 +1,35 @@
+{
+    "Masters" : {
+        "MastersPort"    : "8080",
+        "MastersMaxAuth" : 3,
+        "MastersKeyFile" : "ssh-key.ppk"
+    },
+    
+    "Database" : {
+        "MongoURL": "mongodb://localhost:27017"
+    },
+
+    "App": {
+        "AppName" : "Rain",
+        "Webhook"  : "",
+        "License": "wYMP0NtnSEVVLFtEn1a4CC7mA1nKvWjZ"
+    },
+
+    "Controls" : {
+        "Catpcha" : {
+            "Status" : true,
+            "Header" : "You must answer the question correctly to gain access!", 
+            "AllowedAttempts" : 4,
+            "AdminBypass" : true,
+            "Question" : {
+                "MinGen" : 5,
+                "MaxGen" : 15
+            }
+        },
+
+        "MFA": {
+            "Status" : false,
+            "AdminBypass" : true
+        }
+    }
+}

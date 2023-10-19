@@ -1,0 +1,15 @@
+<<usernameposition(37,11)>>
+<<passwordposition(37,13)>>
+\033c
+\033[38;5;15m           
+           
+           
+           
+           
+           
+           
+           
+
+                          \x1b[38;5;15mUsername: \x1b[30m\x1b[47m                     \x1b[0m
+
+                          \x1b[38;5;15mPassword: \x1b[30m\x1b[47m                     \x1b[0m

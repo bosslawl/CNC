@@ -1,0 +1,17 @@
+name=plan
+description=plan menu
+admin=false
+reseller=false
+vip=false
+raw=false
+holder=false 
+==================== MENU SPLIT DONE ====================
+Name: <<$username>.
+Epxiry: <<$days_left>>
+Concurrents: <<$concurrents>>
+Max Time: <<$maxtime>>
+Cooldown: <<$cooldown>>
+Admin Privilege: <<$admin>>
+VIP Privilege: <<$vip>>
+Raw Privilege: <<$raw>>
+Holder Privilege: <<$holder>>

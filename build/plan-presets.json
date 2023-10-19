@@ -1,0 +1,46 @@
+{
+    "Plans" : [
+        {
+            "Name"        : "Normal",
+            "Description" : "Starter build",
+            "Price"       : "£15/m", 
+
+            "Admin"       : false,
+            "PowerSaving" : false,
+            "BypassBlacklist": false,
+            "Reseller"    : false,
+            "Banned"      : false,
+            "VIP"         : false,
+            "Raw"         : false,
+            "Holder"      : false,
+            
+            "MaxSessions" : 3,
+            "Maxtime"     : 300,
+            "Cooldown"    : 60,
+            "Concurrents" : 1,
+
+            "DaysActive"  : 30
+        },
+        {
+            "Name"        : "Starter",
+            "Description" : "Starter build",
+            "Price"       : "£15/m", 
+
+            "Admin"       : false,
+            "PowerSaving" : false,
+            "BypassBlacklist": false,
+            "Reseller"    : false,
+            "Banned"      : false,
+            "VIP"         : false,
+            "Raw"         : false,
+            "Holder"      : false,
+            
+            "MaxSessions" : 32,
+            "Maxtime"     : 7200,
+            "Cooldown"    : 0,
+            "Concurrents" : 32,
+
+            "DaysActive"  : 30
+        }
+    ]
+}

