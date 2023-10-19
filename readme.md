@@ -39,10 +39,6 @@ you must first create your database.
 
 1. `pm2 log RainCNC`
 
-# Updating
-
-Rain will update automatically, however we do not automatically update build files, if you're running into issues with a new patch, download the new build files from the Discord
-
 # Login
 
 1. Run Rain for the first time to let it build the database.
@@ -71,4 +67,4 @@ Rain will update automatically, however we do not automatically update build fil
 	Make sure every attack has a `,` at the end of the object (after the `}`) from the last attack, but not the very last entry. **IT MUST BE VALID JSON!**
 	*Please do not use a prefix characters such as `.` it is ill-advised.* *Please note all attack names should be lowercase, typing the attack on the CNC can be in capitals but it will automatically be converted to lowercase.*
 
-4. Make sure to save. Please note this file can be updated and reloaded at anytime with out any down time, just run the command `reload` on the CNC if you are a admin.
+1. Make sure to save. Please note this file can be updated and reloaded at anytime with out any down time, just run the command `reload` on the CNC if you are a admin.
