@@ -17,6 +17,7 @@ type AttackMethod struct {
 	Management struct {
 		DefaultPort    int  `json:"DefaultPort"`
 		MaxConcurrents int  `json:"MaxConcurrents"`
+		MaxDuration    int  `json:"MaxDuration"`
 		AdminMethod    bool `json:"AdminMethod"`
 		VIPMethod      bool `json:"VIPMethod"`
 		RawMethod      bool `json:"RawMethod"`

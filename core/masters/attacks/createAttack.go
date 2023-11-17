@@ -27,6 +27,10 @@ type MethodAttacks struct {
 var _ = reflect.TypeOf(MethodAttacks{})
 
 func CreateAttack(command []string, session *Sessions.Session) {
+	// Convert the command to lower case
+	for i := range command {
+		command[i] = strings.ToLower(command[i])
+	}
 
 	Method := Get(command[0])
 
@@ -83,10 +87,21 @@ func CreateAttack(command []string, session *Sessions.Session) {
 	} // Check if the target is blacklisted and if the User can bypass blacklist
 
 	RunTime, error := strconv.Atoi(command[2])
+
 	if error != nil {
+		Execute.Execute_CustomTerm("duration-invalid", session.User, session.Channel, true, nil)
+		return
+	} // Check if the duration is an int
+
+	if RunTime > Method.Management.MaxDuration {
+		Execute.Execute_CustomTerm("max-time", session.User, session.Channel, true, nil)
+		return
+	} // Check if the duration is greater than the max time
+
+	if RunTime > session.User.MaxTime {
 		Execute.Execute_CustomTerm("user-duration", session.User, session.Channel, true, nil)
 		return
-	}
+	} // Check if the duration is greater than the max time for the user
 
 	var Port int
 

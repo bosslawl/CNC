@@ -103,7 +103,7 @@ func CreateUser(session *Sessions.Session, cmd []string) error {
 	connsB := term.NewTerminal(session.Channel, "\x1b[38;5;255mConcurrents>\x1b[38;5;227m ")
 	conns, error := connsB.ReadLine()
 	if error != nil {
-		session.Channel.Write([]byte("lol\r\n"))
+		session.Channel.Write([]byte("\r\n"))
 		return nil
 	}
 
@@ -123,7 +123,7 @@ func CreateUser(session *Sessions.Session, cmd []string) error {
 
 	Maxtime, error := strconv.Atoi(MaxTime)
 	if error != nil {
-		session.Channel.Write([]byte("MaxTime option must be a integer\r\n"))
+		session.Channel.Write([]byte("Maxtime option must be a integer\r\n"))
 		return nil
 	}
 

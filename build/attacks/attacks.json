@@ -16,6 +16,13 @@
                     "Target" : "http://1.67.104.94:6060/funnel/attack?key=aqua&host=[target]&port=[port]&time=[duration]&method=[method]",
                     "URLEncode" : true,
                     "Debugging": false
+                },
+                {
+                    "Enabled" : true,
+                    "Method" : "udp",
+                    "Target" : "http://2.67.104.94:6060/funnel/attack?key=agua&host=[target]&port=[port]&time=[duration]&method=[method]",
+                    "URLEncode" : true,
+                    "Debugging": false
                 }
             ],
             "Management" : {

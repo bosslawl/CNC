@@ -8,10 +8,10 @@ import (
 	Server "Rain/core/functions/server"
 	Attack_Groups "Rain/core/functions/util/attackGroups"
 	Handler "Rain/core/masters/handler"
+
 	//"io"
 
 	"fmt"
-	"log"
 	//"net/http"
 	//"os"
 	"strconv"
@@ -21,7 +21,6 @@ import (
 
 	"github.com/fatih/color"
 )
-
 
 func main() {
 
@@ -50,7 +49,7 @@ func main() {
 
 	boldWhite.Print("\n * ")
 	boldBlue.Println(" Loading License Key... ")
-	
+
 	fmt.Println(color.WhiteString(" - ") + color.WhiteString("[") + color.BlueString("LICENSING") + color.WhiteString("]") + color.WhiteString(" License Key") + color.WhiteString(": ") + color.MagentaString(ParseJson.ConfigParse.App.License))
 	fmt.Println(color.WhiteString(" - ") + color.WhiteString("[") + color.BlueString("LICENSING") + color.WhiteString("]") + color.WhiteString(" Device UUID") + color.WhiteString(": ") + color.MagentaString(uuid))
 
@@ -112,7 +111,6 @@ func main() {
 	boldBlue.Println(" Loading SSH... ")
 
 	Handler.OfflineLoader()
-
 
 	External.GatherExCommands()
 

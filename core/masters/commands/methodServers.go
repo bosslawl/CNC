@@ -5,12 +5,12 @@ import (
 	"strconv"
 	"strings"
 
-	ParseJson "Rain/core/functions/json"
+	Database "Rain/core/database"
 	ParseINI "Rain/core/functions/ini"
-	"Rain/core/functions/util"
-	"Rain/core/functions/util/attackGroups"
-	"Rain/core/masters/sessions"
-	"Rain/core/database"
+	ParseJson "Rain/core/functions/json"
+	Util "Rain/core/functions/util"
+	Attack_Groups "Rain/core/functions/util/attackGroups"
+	Sessions "Rain/core/masters/sessions"
 
 	"github.com/alexeyco/simpletable"
 )
@@ -23,6 +23,10 @@ func init() {
 		Reseller:    false,
 		Description: "View servers information",
 		CommandExecution: func(session *Sessions.Session, cmd []string) error {
+			// Convert the command to lower case
+			for i := range cmd {
+				cmd[i] = strings.ToLower(cmd[i])
+			}
 
 			if len(cmd) < 2 {
 				session.Channel.Write([]byte("\x1b[0m"))
@@ -140,7 +144,7 @@ func init() {
 					}
 					count++
 					r := []*simpletable.Cell{
-						{Align: simpletable.AlignCenter, Text: strconv.Itoa(count) },
+						{Align: simpletable.AlignCenter, Text: strconv.Itoa(count)},
 						{Align: simpletable.AlignCenter, Text: I.Name},
 						{Align: simpletable.AlignCenter, Text: I.Description},
 						{Align: simpletable.AlignCenter, Text: Util.ColourizeBoolen(I.VIP, true)},
@@ -151,7 +155,7 @@ func init() {
 				}
 
 				ParseINI.ParseTableServers(table)
-				
+
 				fmt.Fprint(session.Channel, "")
 				fmt.Fprintln(session.Channel, strings.ReplaceAll(table.String(), "\n", "\r\n"))
 				fmt.Fprint(session.Channel, "\r")
