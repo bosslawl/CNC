@@ -1,5 +1,11 @@
 # Rain
 
+## Disclaimer
+
+This repository contains findings and test software related to security research and penetration testing. Since there is no program by the developer all findings will be publically published for free. We do not take responsibility for what anyone does using our findings or software. This project is being created for educational and security research purposes only!
+
+We are not encouraging any misuse with this repository. It is purely for educational purposes only.
+
 # Minimum specs
 
 Ram: `2 Gb`
